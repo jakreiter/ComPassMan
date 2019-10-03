@@ -1,3 +1,4 @@
+#!/usr/bin/env bash
 # New install
 # svn checkout http://svn.mbnd.eu/svn/dev2/projects/internalwebtools/symfony4_user_skeleton user_sk
 # cd user_sk

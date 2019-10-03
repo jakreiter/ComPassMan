@@ -30,6 +30,7 @@ Installation
   * Make public directory accessible by web server
   * Prepare empty MySQL database
   * Basing on .env.dist create .env file with configuration
+  * On linux machines run `chmod 744 *.sh`
   * Run install.sh
   
   

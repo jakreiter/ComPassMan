@@ -3,6 +3,6 @@ parameters:
     app.admin_pass_initial: ~
     app.admin_email_initial: ~
     sender:
-        name: 'Survey Center'
-        email: 'survey_dont_reply@macrobond.com'
+        name: 'ComPassMan'
+        email: 'ComPassMan@mail.com'
     token_seed: ~ 
