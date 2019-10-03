@@ -5,7 +5,8 @@
         "jquery": "^3.3.1",
         "node-sass": "*",
         "sass-loader": "*",
-        "webpack-notifier": "*"
+        "webpack-notifier": "*",
+        "lodash": ">=4.17.13"
     },
     "license": "UNLICENSED",
     "private": true,
