@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}File{% endblock %}
+
+{% block body %}
+   		<div class="alert alert-info alert-dismissible niezaszer" role="alert">
+			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+				<span aria-hidden="true">&times;</span>
+			</button>
+			{{ message|raw }}
+		</div>
+{% endblock %}

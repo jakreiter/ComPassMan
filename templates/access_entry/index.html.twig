@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Access Entry index{% endblock %}
+
+{% block body %}
+    <h1>Entries</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Title</th>
+                <th>UserName</th>
+                <th>Url</th>
+                <th>Created on</th>
+                <th>Created by</th>
+                <th>Updated on</th>
+                <th>Updated by</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for access_entry in access_entries %}
+            <tr>
+                <td>{{ access_entry.id }}</td>
+                <td>{{ access_entry.title }}</td>
+                <td>{{ access_entry.userName }}</td>
+
+                <td>{{ access_entry.url }}</td>
+                <td>{{ access_entry.created ? access_entry.created|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ access_entry.createdBy }}</td>
+                <td>{{ access_entry.updated ? access_entry.updated|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ access_entry.modifiedBy }}</td>
+                <td>
+                    <a href="{{ path('access_entry_show', {'id': access_entry.id}) }}" class="btn btn-primary">show</a>
+                    <a href="{{ path('access_entry_edit', {'id': access_entry.id}) }}" class="btn btn-primary">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="13">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('access_entry_new') }}" class="btn btn-success">Create new</a>
+{% endblock %}

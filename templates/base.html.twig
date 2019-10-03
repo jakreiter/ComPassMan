@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head> 
+<meta charset="UTF-8">
+<title>{% block title %}{% endblock %} - {{ app_title }}</title>
+<link rel="stylesheet" href="{{ asset('build/adm.css') }}">
+</head>
+<body class="adm">
+	<div class="session_info">
+		{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+		<div class="row" style="margin-top: 2px; padding-top: 4px;">
+			<div class="col-md-6" style="text-align: left; color: #019;">
+				<span style="font-size: 2em;">The Company's Password Manager</span>
+			</div>
+			<div class="col-md-4">
+
+				<a href="{{ path('access_entry_index') }}" class="btn btn-primary">Entries</a>
+				<a href="{{ path('access_entry_category_index') }}" class="btn btn-primary">Categories</a>
+				<a href="{{ path('user_index') }}" class="btn btn-primary">Users</a>
+			</div>
+
+			<div class="col-md-2">
+				<div>Logged as <span class="logeduser {% if is_granted('ROLE_PREVIOUS_ADMIN') %}impersonate{% endif %}">{{ app.user.username }}</span></div>
+				<div>
+					<a href="{{ path('user_change_my_pass') }}" class="btn btn-primary btn-xs">change password</a>
+				</div>
+
+			</div>
+		</div>
+		{% endif %}
+	</div>
+	<div class="cleaner"></div>
+
+	<div class="main_content">
+		{% if app.request.hasPreviousSession %}
+			{% for flash_message in app.flashes('danger') %}
+			<div class="alert alert-danger alert-dismissible niezaszer" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				{{ flash_message|raw }}
+			</div>
+			{% endfor %}
+			{% for flash_message in app.flashes('info') %}
+			<div class="alert alert-info alert-dismissible niezaszer" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				{{ flash_message|raw }}
+			</div>
+			{% endfor %}
+			{% for flash_message in app.flashes('warning') %}
+			<div class="alert alert-warning alert-dismissible niezaszer" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				{{ flash_message|raw }}
+			</div>
+			{% endfor %}
+			{% for flash_message in app.flashes('success') %}
+			<div class="alert alert-success alert-dismissible niezaszer animated bounceOutLeft" style="animation-delay: 8s;" role="alert">
+				<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+				{{ flash_message|raw }}
+			</div>
+			{% endfor %}
+		{% endif %}
+
+		{% block body %}
+		{% endblock %}
+	</div>
+
+	{% block javascripts %}
+	<script src="{{ asset('build/manifest.js') }}"></script>
+	<script src="{{ asset('build/vendor.js') }}"></script>
+	<script src="{{ asset('build/adm.js') }}"></script>
+
+	{% endblock %}
+</body>
+</html>

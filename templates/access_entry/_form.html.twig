@@ -1,0 +1,44 @@
+{{ form_start(form) }}
+
+<div class="row">
+    <div class="col-md-4">
+        {{ form_row(form.category) }}
+    </div>
+    <div class="col-md-4">
+        {{ form_row(form.title) }}
+    </div>
+    <div class="col-md-4">
+        {{ form_row(form.url) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-4">
+        {{ form_row(form.userName) }}
+    </div>
+    <div class="col-md-8 bg-warning">
+        {{ form_row(form.decryptedPassword) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12 bg-warning">
+        {{ form_row(form.decryptedKey) }}
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-12">
+        {{ form_row(form.notes) }}
+    </div>
+</div>
+
+{{ form_rest(form) }}
+<div class="row">
+    <div class="col-md-2">
+        <button class="btn btn-success btn-block">{{ button_label|default('Save') }}</button>
+    </div>
+    <div class="col-md-10">
+    </div>
+</div>
+
+
+
+{{ form_end(form) }}

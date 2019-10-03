@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AccessEntryCategory{% endblock %}
+
+{% block body %}
+    <h1>AccessEntryCategory</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ access_entry_category.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ access_entry_category.title }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('access_entry_category_index') }}">back to list</a>
+
+    <a href="{{ path('access_entry_category_edit', {'id': access_entry_category.id}) }}">edit</a>
+
+    {{ include('access_entry_category/_delete_form.html.twig') }}
+{% endblock %}

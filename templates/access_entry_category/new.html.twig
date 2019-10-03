@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New AccessEntryCategory{% endblock %}
+
+{% block body %}
+    <h1>Create new AccessEntryCategory</h1>
+
+    {{ include('access_entry_category/_form.html.twig') }}
+
+    <a href="{{ path('access_entry_category_index') }}">back to list</a>
+{% endblock %}

@@ -1,0 +1,85 @@
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+
+@import 'colors';
+
+$brand-primary: $mbf_blue;
+
+html, body.adm {
+	min-height: 100vh;	
+	background: #eee;
+}
+
+.main_content {
+	padding: 30px;	
+}
+
+
+div.loginError {
+  padding: 10px;
+  background: #c00;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  padding: 10px;
+
+  p {
+    margin: 2px;
+  }
+}
+
+.formSigninContainer {
+	display: flex;	
+	justify-content: center;
+    min-height: 90vh;
+}
+
+.formSigninInContainer {
+	background-color: $mbf_lightgray;
+	flex-grow: 0.25;
+	align-self: center;
+	padding: 2em;
+	border-radius: 4px; 
+	border: 2px solid $loginFormBorderColor;
+}
+
+.session_info {
+	background-color: $mbf_lightgray;
+	text-align: right;
+}
+
+/* $brand-primary: darken(#ff0000, 10%);
+$border-radius-base: 0px !default;
+$border-radius-large: 0px !default;
+$border-radius-small: 0px !default;
+ */
+label.required:before {
+	content: "* ";
+}
+
+.freetextsymbol {
+	border: 1px solid #555;
+	height: 20px;
+	width: 50%;
+}
+
+.textareasymbol {
+	border: 1px solid #555;
+	height: 60px;
+	width: 50%;
+}
+
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+
+
+.secret-hts span {
+	opacity: 0.5;
+}
+
+.logeduser {
+	font-weight: bold;
+	color: #fff;
+	border-radius: 0.25em;
+	background: #111;
+	padding: 0.25em;
+
+}

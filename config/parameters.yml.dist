@@ -1,0 +1,8 @@
+parameters:
+    app.title: The Company's Password Manager
+    app.admin_pass_initial: ~
+    app.admin_email_initial: ~
+    sender:
+        name: 'Survey Center'
+        email: 'survey_dont_reply@macrobond.com'
+    token_seed: ~ 

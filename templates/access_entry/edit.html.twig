@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Access Entry{% endblock %}
+
+{% block body %}
+    <h1>Edit Access Entry</h1>
+
+    {{ include('access_entry/_form.html.twig', {'button_label': 'Update'}) }}
+
+
+    <div class="row">
+        <div class="col-md-8"></div>
+        <div class="col-md-2">
+            {{ include('access_entry/_delete_form.html.twig') }}
+        </div>
+        <div class="col-md-2">
+            <a href="{{ path('access_entry_index') }}" class="btn btn-default btn-block">back to list</a>
+        </div>
+    </div>
+
+{% endblock %}

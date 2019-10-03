@@ -1,0 +1,97 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}AccessEntry{% endblock %}
+
+{% block body %}
+    <h1>Access Entry</h1>
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <th>Id</th>
+                    <td>{{ access_entry.id }}</td>
+                </tr>
+                <tr>
+                    <th>Title</th>
+                    <td>{{ access_entry.title }}</td>
+                </tr>
+                <tr>
+                    <th>UserName</th>
+                    <td>{{ access_entry.userName }}</td>
+                </tr>
+                <tr>
+                    <th>Salt</th>
+                    <td>{{ access_entry.salt }}</td>
+                </tr>
+                <tr>
+                    <th>CipherMethod</th>
+                    <td>{{ access_entry.cipherMethod }}</td>
+                </tr>
+                <tr>
+                    <th>MasterKeyLength</th>
+                    <td>{{ access_entry.masterKeyLength }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <table class="table table-bordered">
+                <tbody>
+                <tr>
+                    <th>Url</th>
+                    <td>{{ access_entry.url }}</td>
+                </tr>
+                <tr>
+                    <th>Notes</th>
+                    <td>{{ access_entry.notes }}</td>
+                </tr>
+                <tr>
+                    <th>Created</th>
+                    <td>{{ access_entry.created ? access_entry.created|date('Y-m-d H:i:s') : '' }}</td>
+                </tr>
+                <tr>
+                    <th>Updated</th>
+                    <td>{{ access_entry.updated ? access_entry.updated|date('Y-m-d H:i:s') : '' }}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <table class="table table-bordered">
+                <tbody>
+
+                <tr>
+                    <th>Password</th>
+                    <td class="secret-field secret-hts bg-warning"><span class="">{{ access_entry.decryptedPassword }}</span></td>
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <table class="table table-bordered">
+        <tbody>
+        <tr>
+            <th>Key</th>
+            <td class="secret-field secret-hts bg-warning"><span class="">{{ access_entry.decryptedKey|nl2br }}</span></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div class="row">
+        <div class="col-md-4"><a href="{{ path('access_entry_index') }}" class="btn btn-default btn-block">Back to
+                list</a></div>
+        <div class="col-md-4"><a href="{{ path('access_entry_edit', {'id': access_entry.id}) }}"
+                                 class="btn btn-primary btn-block">Edit</a></div>
+        <div class="col-md-4"> {{ include('access_entry/_delete_form.html.twig') }}</div>
+    </div>
+
+
+
+
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit AccessEntryCategory{% endblock %}
+
+{% block body %}
+    <h1>Edit AccessEntryCategory</h1>
+
+    {{ include('access_entry_category/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('access_entry_category_index') }}" class="btn btn-default">back to list</a>
+
+    {{ include('access_entry_category/_delete_form.html.twig') }}
+{% endblock %}
