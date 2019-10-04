@@ -10,4 +10,4 @@ php composer.phar install
 echo "Loading fixures - for example first, administrative user"
 php bin/console doctrine:schema:update --force --env=dev
 php bin/console doctrine:fixtures:load --env=dev
-yarn
+yarn install
