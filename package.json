@@ -2,7 +2,7 @@
     "devDependencies": {
         "@symfony/webpack-encore": "*",
         "bootstrap-sass": "^3.3.7",
-        "jquery": "^3.3.1",
+        "jquery": "^3.4.0",
         "node-sass": "*",
         "sass-loader": "*",
         "webpack-notifier": "*",
