@@ -5,10 +5,9 @@
         "jquery": "^3.4.0",
         "node-sass": "*",
         "sass-loader": "*",
-        "webpack-notifier": "*",
-        "lodash": ">=4.17.13"
+        "webpack-notifier": "*"
     },
-    "license": "UNLICENSED",
+    "license": "MIT",
     "private": true,
     "scripts": {
         "dev-server": "encore dev-server",
