@@ -1,13 +1,13 @@
 {
     "devDependencies": {
-        "@symfony/webpack-encore": "*",
-        "bootstrap-sass": "^3.4.1",
-        "jquery": "^3.4.0",
-        "node-sass": "*",
-        "sass-loader": "*",
-        "webpack-notifier": "*"
+        "@symfony/webpack-encore": "^0.17.0",
+        "bootstrap-sass": "^3.3.7",
+        "jquery": "^3.3.1",
+        "node-sass": "^4.9.0",
+        "sass-loader": "^7.0.1",
+        "webpack-notifier": "^1.6.0"
     },
-    "license": "MIT",
+    "license": "UNLICENSED",
     "private": true,
     "scripts": {
         "dev-server": "encore dev-server",
