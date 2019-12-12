@@ -15,6 +15,7 @@ Encore
 
 
 	.createSharedEntry('vendor', './assets/js/vendor.js')
+	.enableSingleRuntimeChunk()
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader(function(sassOptions) {}, {
