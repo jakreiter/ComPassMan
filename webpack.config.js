@@ -14,10 +14,7 @@ Encore
 	.addEntry('adm',  './assets/js/adm.js' )
 
 
-	.createSharedEntry('vendor', [
-        'jquery', 
-        'bootstrap',
-    ]) 
+	.createSharedEntry('vendor', './assets/js/vendor.js')
 
     // uncomment if you use Sass/SCSS files
     .enableSassLoader(function(sassOptions) {}, {
