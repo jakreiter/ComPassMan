@@ -16,7 +16,7 @@ Encore
 
 	.createSharedEntry('vendor', [
         'jquery', 
-        'bootstrap-sass',
+        'bootstrap',
     ]) 
 
     // uncomment if you use Sass/SCSS files

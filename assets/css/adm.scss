@@ -1,4 +1,3 @@
-$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
 
 @import 'colors';
 
@@ -20,7 +19,7 @@ div.loginError {
   color: #fff;
   text-align: center;
   border-radius: 4px;
-  padding: 10px;
+
 
   p {
     margin: 2px;
@@ -68,7 +67,7 @@ label.required:before {
 	width: 50%;
 }
 
-@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+@import "~bootstrap/scss/bootstrap";
 
 
 .secret-hts span {
