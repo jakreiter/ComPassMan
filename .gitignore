@@ -24,3 +24,5 @@ yarn-error.log
 ###< symfony/web-server-bundle ###
 /.idea/
 /.buildpath
+/public/fonts/
+/public/images/
