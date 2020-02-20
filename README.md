@@ -1,4 +1,4 @@
-compassman - Company's Password Manager
+Compassman - Company's Password Manager
 =======================================
 
 Compassman is an application that allows sharing of passwords by many users.

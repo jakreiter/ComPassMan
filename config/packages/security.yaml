@@ -27,6 +27,6 @@ security:
         - { path: ^/admin/logout, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/admin, roles: ROLE_ADMIN }
-        - { path: ^/access_entry, roles: ROLE_USER }
+        - { path: ^/access_entry, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/access, roles: ROLE_USER }
         - { path: ^/profile, roles: ROLE_USER }
